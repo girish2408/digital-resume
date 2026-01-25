@@ -5,6 +5,9 @@ import { glob } from 'glob';
 import * as lancedb from '@lancedb/lancedb';
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const pdf = require('pdf-parse');
 
 dotenv.config({ path: '.env.local' }); // Load .env.local first
 dotenv.config(); // Then .env
@@ -31,13 +34,26 @@ async function ingest() {
   // Note: @lancedb/lancedb API might differ slightly from python or old node versions.
   // We'll try to create a table.
   
-  const files = await glob('knowledge/**/*.md');
-  console.log(`Found ${files.length} knowledge files.`);
+// Inside ingest function:
+  // const pdfFiles = await glob('public/*.pdf'); 
+  const globFiles = await glob('knowledge/**/*.md');
+  const files = [...globFiles]; // , ...pdfFiles]; 
+  console.log(`Found ${files.length} files (Markdown only).`);
 
   const data: Array<{ id: string; vector: number[]; text: string; source: string }> = [];
 
   for (const file of files) {
-    const content = fs.readFileSync(file, 'utf-8');
+    let content = '';
+    
+    // if (file.endsWith('.pdf')) {
+    //     console.log(`Parsing PDF: ${file}`);
+    //     const dataBuffer = fs.readFileSync(file);
+    //     // const pdfData = await pdf(dataBuffer);
+    //     // content = pdfData.text;
+    // } else {
+        content = fs.readFileSync(file, 'utf-8');
+    // }
+
     // Split by newlines to avoid huge tokens. 
     // We will group lines until we reach a rough character limit (e.g. 1000 chars)
     const lines = content.split('\n');
