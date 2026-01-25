@@ -3,10 +3,12 @@ import { Resend } from "resend"
 import { emailSchema } from "@/lib/validators"
 import { rateLimit, getClientIdentifier } from "@/lib/rateLimit"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: NextRequest) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY)
+
     // Rate limiting
     const clientId = getClientIdentifier(req)
     const limit = rateLimit(`email-${clientId}`)

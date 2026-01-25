@@ -6,7 +6,12 @@ import twilio from "twilio"
 import { writeFile, readFile, mkdir } from "fs/promises"
 import { join } from "path"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// const resend = new Resend(process.env.RESEND_API_KEY)
+
+// ... imports ...
+
+
+// const resend = new Resend(process.env.RESEND_API_KEY)
 
 interface Lead {
   id: string
@@ -36,6 +41,8 @@ async function writeLeads(leads: Lead[]): Promise<void> {
 
 export async function POST(req: NextRequest) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY)
+
     const body = await req.json()
     const { toolName, arguments: args } = body
 
