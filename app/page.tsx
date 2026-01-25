@@ -130,7 +130,7 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-5xl font-bold font-heading">Ready to Innovate?</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              I'm always open to discussing new projects, AI integration, or just chatting about the future of tech.
+              I&apos;m always open to discussing new projects, AI integration, or just chatting about the future of tech.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="rounded-full h-14 px-8 text-lg">

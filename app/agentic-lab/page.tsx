@@ -137,7 +137,7 @@ export default function AgenticLab() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  This portfolio's chat assistant demonstrates RAG-based Q&A, tool calling (email, SMS, lead creation),
+                  This portfolio&apos;s chat assistant demonstrates RAG-based Q&A, tool calling (email, SMS, lead creation),
                   and multi-mode operation (Profile, Recruiter, Project Deep Dive). Built with Next.js, OpenAI API,
                   and a knowledge base retrieval system.
                 </p>

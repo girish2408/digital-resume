@@ -25,12 +25,12 @@ export default function About() {
           <h2 className="text-2xl font-semibold">My Journey</h2>
           <div className="prose prose-neutral dark:prose-invert max-w-none">
             <p className="text-lg">
-              I'm an AI-Focused Full Stack Developer with extensive experience building production-grade systems
+              I&apos;m an AI-Focused Full Stack Developer with extensive experience building production-grade systems
               for major financial institutions. My work spans from resilient microservices architecture to
               cutting-edge AI agent development.
             </p>
             <p>
-              At Emirates NBD, I've built critical wealth trading journeys, implemented event-driven architectures
+              At Emirates NBD, I&apos;ve built critical wealth trading journeys, implemented event-driven architectures
               with Kafka, and developed AI-powered speech-to-summary pipelines using Azure AI and LangChain.
               I specialize in building systems that are not just functional, but resilient—with proper retries,
               idempotency, circuit breakers, and distributed tracing.
