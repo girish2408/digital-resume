@@ -1,0 +1,66 @@
+[
+  {
+    "id": "stock-insights",
+    "name": "Stock Insights Dashboard",
+    "description": "A real-time stock market insights and analytics dashboard providing comprehensive market data visualization and analysis tools.",
+    "longDescription": "Built a production-ready dashboard for stock market insights with real-time data feeds, interactive charts, and advanced analytics. Deployed on Railway with optimized performance and responsive design.",
+    "deployment": "Railway",
+    "liveUrl": "https://stock-insights.railway.app",
+    "githubUrl": "https://github.com/girish2408/stock-insights",
+    "technologies": ["Next.js", "TypeScript", "Real-time Data", "Chart.js", "Tailwind CSS"],
+    "architecture": {
+      "frontend": "Next.js with App Router",
+      "backend": "Node.js API routes",
+      "data": "Real-time market data APIs",
+      "deployment": "Railway"
+    },
+    "highlights": [
+      "Real-time data streaming",
+      "Interactive chart visualizations",
+      "Responsive mobile design",
+      "Fast performance optimization"
+    ]
+  },
+  {
+    "id": "canopyads",
+    "name": "CanopyAds.io",
+    "description": "Modern advertising platform solution with advanced targeting and analytics capabilities.",
+    "longDescription": "Developed a comprehensive advertising platform with campaign management, audience targeting, and performance analytics. Built with modern web technologies for scalability and user experience.",
+    "liveUrl": "https://canopyads.io",
+    "githubUrl": "https://github.com/girish2408/canopyads",
+    "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Redis", "Tailwind CSS"],
+    "architecture": {
+      "frontend": "Next.js with server components",
+      "backend": "NestJS microservices",
+      "database": "PostgreSQL with Redis caching",
+      "deployment": "Vercel + Railway"
+    },
+    "highlights": [
+      "Campaign management system",
+      "Advanced targeting algorithms",
+      "Real-time analytics dashboard",
+      "Scalable microservices architecture"
+    ]
+  },
+  {
+    "id": "market-decoder",
+    "name": "Market Decoder",
+    "description": "AI-powered news summarizer that processes financial market news and provides intelligent summaries.",
+    "longDescription": "Built an AI-powered news summarization system specifically for financial markets. Uses advanced NLP and AI models to extract key insights from news articles, providing traders and analysts with concise, actionable summaries.",
+    "githubUrl": "https://github.com/girish2408/market-decoder",
+    "technologies": ["Python", "LangChain", "OpenAI API", "RAG", "Vector DB", "Next.js"],
+    "architecture": {
+      "ai": "LangChain with OpenAI GPT models",
+      "retrieval": "RAG pipeline with vector embeddings",
+      "backend": "Python FastAPI",
+      "frontend": "Next.js dashboard",
+      "storage": "Vector database for embeddings"
+    },
+    "highlights": [
+      "AI-powered summarization",
+      "RAG-based knowledge retrieval",
+      "Financial news processing",
+      "Intelligent insight extraction"
+    ]
+  }
+]

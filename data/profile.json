@@ -1,0 +1,116 @@
+{
+  "personal": {
+    "name": "Girish Watwani",
+    "location": "Abu Dhabi, UAE",
+    "role": "AI-Focused Full Stack Developer",
+    "contact": {
+      "phone": "+971503214652",
+      "email": "girish.watwani2008@gmail.com",
+      "linkedin": "www.linkedin.com/in/girish-watwani/",
+      "github": "https://github.com/girish2408"
+    }
+  },
+  "experience": [
+    {
+      "company": "Emirates NBD / D4Insight",
+      "role": "AI-Focused Full Stack Developer",
+      "period": "Recent",
+      "highlights": [
+        "Built Node.js microservices for wealth trading journeys",
+        "Implemented gold buy/sell/redeem workflows",
+        "Integrated Kafka for event-driven architecture",
+        "Implemented retries, idempotency, circuit breakers, and distributed tracing",
+        "Developed AI speech-to-summary pipeline using Azure AI and LangChain",
+        "Built rights issue and DCI (Digital Customer Interface) features",
+        "Implemented price alerts system",
+        "Set up Playwright CI/CD pipelines"
+      ],
+      "technologies": ["Node.js", "TypeScript", "Kafka", "Azure AI", "LangChain", "Playwright", "Microservices", "Distributed Systems"]
+    },
+    {
+      "company": "RBC",
+      "role": "Full Stack Developer",
+      "period": "Previous",
+      "highlights": [
+        "Developed Node.js + Angular + GraphQL advisor portal",
+        "Optimized application performance",
+        "Built scalable frontend and backend solutions"
+      ],
+      "technologies": ["Node.js", "Angular", "GraphQL", "TypeScript"]
+    },
+    {
+      "company": "Accenture",
+      "role": "Developer",
+      "period": "Previous",
+      "highlights": [
+        "Worked on TD accessibility initiatives",
+        "Built Angular components",
+        "Implemented CI/CD pipelines"
+      ],
+      "technologies": ["Angular", "TypeScript", "CI/CD"]
+    },
+    {
+      "company": "TCS",
+      "role": "Developer",
+      "period": "Previous",
+      "highlights": [
+        "Managed OpenShift migrations",
+        "Built dashboards and monitoring tools"
+      ],
+      "technologies": ["OpenShift", "Kubernetes", "Dashboards"]
+    },
+    {
+      "company": "Infosys",
+      "role": "Developer",
+      "period": "Previous",
+      "highlights": [
+        "Optimized retail site performance",
+        "Built automation solutions"
+      ],
+      "technologies": ["Performance Optimization", "Automation"]
+    }
+  ],
+  "skills": {
+    "ai": ["LangChain", "LangGraph", "OpenAI API", "RAG", "Vector DBs (Chroma/Pinecone)", "Agentic AI", "n8n", "MCP", "LangSmith", "Azure AI Studio"],
+    "backend": ["Node.js", "TypeScript", "JavaScript", "Python", "NestJS", "GraphQL", "REST", "Microservices"],
+    "frontend": ["Angular", "React", "Next.js", "TypeScript"],
+    "infrastructure": ["Docker", "Kubernetes", "OpenShift", "CI/CD"],
+    "databases": ["PostgreSQL", "MongoDB", "Firestore", "Redis"],
+    "testing": ["Playwright", "Jest", "Mocha", "Cypress"],
+    "messaging": ["Kafka"]
+  },
+  "projects": [
+    {
+      "name": "Stock Insights Dashboard",
+      "description": "Real-time stock market insights and analytics dashboard",
+      "deployment": "Railway",
+      "technologies": ["Next.js", "TypeScript", "Real-time Data"]
+    },
+    {
+      "name": "CanopyAds.io",
+      "description": "Advertising platform solution",
+      "technologies": ["Full Stack", "Modern Web"]
+    },
+    {
+      "name": "Market Decoder",
+      "description": "AI-powered news summarizer for financial markets",
+      "technologies": ["AI", "NLP", "News Processing"]
+    }
+  ],
+  "education": {
+    "degree": "MS AI",
+    "status": "In Progress"
+  },
+  "expertise": {
+    "domains": ["Banking", "Wealth Management", "Trading Platforms", "AI/ML", "Agentic AI", "RAG Systems"],
+    "specializations": [
+      "Resilient microservices architecture",
+      "Event-driven systems with Kafka",
+      "AI-powered workflows with LangChain",
+      "RAG pipeline development",
+      "Agent orchestration with MCP",
+      "Performance optimization",
+      "CI/CD automation"
+    ]
+  }
+}
