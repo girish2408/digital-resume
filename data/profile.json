@@ -21,7 +21,7 @@
         "Integrated Kafka for event-driven architecture",
         "Implemented retries, idempotency, circuit breakers, and distributed tracing",
         "Developed AI speech-to-summary pipeline using Azure AI and LangChain",
-        "Built rights issue and DCI (Digital Customer Interface) features",
+        "Built rights issue and DCI (Dual Currency Investment) features",
         "Implemented price alerts system",
         "Set up Playwright CI/CD pipelines"
       ],

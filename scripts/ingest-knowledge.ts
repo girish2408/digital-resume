@@ -35,24 +35,40 @@ async function ingest() {
   // We'll try to create a table.
   
 // Inside ingest function:
-  // const pdfFiles = await glob('public/*.pdf'); 
-  const globFiles = await glob('knowledge/**/*.md');
-  const files = [...globFiles]; // , ...pdfFiles]; 
-  console.log(`Found ${files.length} files (Markdown only).`);
+  const pdfFiles = await glob('public/*.pdf'); 
+  // const globFiles = await glob('knowledge/**/*.md'); // Skip generic knowledge
+  const files = [...pdfFiles]; 
+  
+  // Also add profile.json if exists
+  const profilePath = path.join(process.cwd(), 'data/profile.json');
+  if (fs.existsSync(profilePath)) {
+      files.push(profilePath);
+  }
+
+  console.log(`Found ${files.length} files (Resume + Profile).\nFiles: ${files.join(', ')}`);
 
   const data: Array<{ id: string; vector: number[]; text: string; source: string }> = [];
 
   for (const file of files) {
     let content = '';
     
-    // if (file.endsWith('.pdf')) {
-    //     console.log(`Parsing PDF: ${file}`);
-    //     const dataBuffer = fs.readFileSync(file);
-    //     // const pdfData = await pdf(dataBuffer);
-    //     // content = pdfData.text;
-    // } else {
+    if (file.endsWith('.pdf')) {
+        console.log(`Parsing PDF: ${file}`);
+        const dataBuffer = fs.readFileSync(file);
+        try {
+            const pdfData = await pdf(dataBuffer);
+            content = pdfData.text;
+        } catch (e) {
+            console.error(`Failed to parse PDF ${file}:`, e);
+            continue;
+        }
+    } else if (file.endsWith('.json')) {
+        console.log(`Parsing JSON: ${file}`);
+        const jsonData = JSON.parse(fs.readFileSync(file, 'utf-8'));
+        content = JSON.stringify(jsonData, null, 2);
+    } else {
         content = fs.readFileSync(file, 'utf-8');
-    // }
+    }
 
     // Split by newlines to avoid huge tokens. 
     // We will group lines until we reach a rough character limit (e.g. 1000 chars)
@@ -72,7 +88,7 @@ async function ingest() {
     console.log(`Processing ${file}: ${chunks.length} chunks`);
 
     for (let i = 0; i < chunks.length; i++) {
-        if (i % 10 === 0) console.log(`  Processing chunk ${i + 1}/${chunks.length}...`);
+        // if (i % 10 === 0) console.log(`  Processing chunk ${i + 1}/${chunks.length}...`);
       const chunk = chunks[i];
       // Skip very short chunks
       if (chunk.length < 10) continue;
@@ -99,8 +115,7 @@ async function ingest() {
 
   if (data.length > 0) {
     try {
-        // Create table with the first batch of data
-        // If table exists, existing one will be overwritten because we will 'overwrite' or just drop it first.
+        // Create table with the new data, OVERWRITING existing generic garbage
         const existingTables = await db.tableNames();
         if (existingTables.includes('knowledge')) {
             await db.dropTable('knowledge');
