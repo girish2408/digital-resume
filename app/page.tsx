@@ -117,7 +117,7 @@ export default function Home() {
                     <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-500">
                       <Cpu className="w-6 h-6" />
                     </div>
-                    <h3 className="text-xl font-bold font-heading">Agentic AI Pioneer</h3>
+                    <h3 className="text-xl font-bold font-heading">Agentic AI Engineer</h3>
                   </div>
                   <p className="text-muted-foreground mb-4 max-w-lg">
                     Specializing in LangChain & RAG architectures to build autonomous agents that plan, reason, and execute.
