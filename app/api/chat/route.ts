@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
     // If results are empty or distance is too high (low similarity), we might want to skip? 
     // But for now let's pass top 3.
     if (results.length === 0) {
-         return NextResponse.json({ response: "girish doesnt have clue about this or leave the query will be handled later" });
+         return NextResponse.json({ response: "I don't have enough details on that specific topic in my current knowledge base to provide an accurate answer, but I would be happy to discuss it further if you get in touch!" });
     }
 
     const context = results.map((r: any) => r.text).join('\n---\n');
@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
     ${context}
     
     Answer the user's question based ONLY on the above context.
-    If the answer is not in the context, say exactly: "girish doesnt have clue about this or leave the query will be handled later".
+    If the answer is not in the context, say exactly: "I don't have enough details on that specific topic in my current knowledge base to provide an accurate answer, but I would be happy to discuss it further if you get in touch!".
     Do not hallucinate or use outside knowledge.
     Keep the answer concise and helpful.`;
 

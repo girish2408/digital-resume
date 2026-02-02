@@ -36,8 +36,8 @@ async function ingest() {
   
 // Inside ingest function:
   const pdfFiles = await glob('public/*.pdf'); 
-  // const globFiles = await glob('knowledge/**/*.md'); // Skip generic knowledge
-  const files = [...pdfFiles]; 
+  const globFiles = await glob('knowledge/**/*.md'); // Include general knowledge
+  const files = [...pdfFiles, ...globFiles]; 
   
   // Also add profile.json if exists
   const profilePath = path.join(process.cwd(), 'data/profile.json');

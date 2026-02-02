@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { TechMarquee } from "@/components/TechMarquee"
+
 import { Download, ArrowRight, Github, Linkedin, Briefcase, Bot, Code2, Terminal, Cpu } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -162,21 +162,29 @@ export default function Home() {
                 </p>
               </motion.div>
 
-              {/* Card 4: Tech Stack Marquee (Wide) */}
+              {/* Card 4: Tech Stack (Static Grid) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="col-span-1 md:col-span-2 rounded-3xl border border-border/50 bg-card/30 backdrop-blur-md overflow-hidden flex flex-col justify-center h-32 md:h-40"
+                className="col-span-1 md:col-span-2 rounded-3xl border border-border/50 bg-card/30 backdrop-blur-md flex flex-col justify-center p-6"
               >
-                <div className="px-6 pt-4 pb-0">
-                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-2 flex items-center gap-2">
-                    <Terminal className="w-3 h-3" />
-                    Core Technologies
-                  </p>
-                </div>
-                <div className="pb-2">
-                  <TechMarquee />
+                <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <Terminal className="w-3 h-3" />
+                  Core Technologies
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "LangChain", "LangGraph", "MCP", "RAG",
+                    "Node.js", "Kafka", "GraphQL", "TypeScript",
+                    "Next.js", "Azure AI", "OpenAI API", "Vector DBs",
+                    "Microservices", "Docker", "Kubernetes"
+                  ].map((tech) => (
+                    <span key={tech} className="px-3 py-1.5 rounded-md text-xs font-medium bg-primary/5 text-primary/80 border border-primary/10 hover:bg-primary/10 transition-colors cursor-default">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </motion.div>
 

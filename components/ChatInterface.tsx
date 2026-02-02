@@ -110,6 +110,26 @@ export function ChatInterface() {
                                     <Send className="h-4 w-4" />
                                 </Button>
                             </form>
+
+                            {messages.length === 1 && (
+                                <div className="mt-4">
+                                    <p className="text-xs text-muted-foreground mb-2 font-medium">Suggested Topics:</p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {["Resume", "Angular", "React", "Node", "Kafka", "JavaScript", "Docker"].map((topic) => (
+                                            <button
+                                                key={topic}
+                                                onClick={() => {
+                                                    const query = topic === "Resume" ? "Can you summarize Girish's resume?" : `What is Girish's experience with ${topic}?`;
+                                                    setInput(query);
+                                                }}
+                                                className="text-xs px-2 py-1 rounded-md bg-muted hover:bg-muted/80 border transition-colors"
+                                            >
+                                                {topic}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </motion.div>
                 )}
