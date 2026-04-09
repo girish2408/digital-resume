@@ -16,29 +16,29 @@ export default function About() {
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">About</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Building resilient systems and intelligent agents for banking and wealth platforms
+            AI Full Stack Engineer | LLM & Agentic Systems
           </p>
         </div>
 
         {/* Narrative */}
         <section className="space-y-6">
-          <h2 className="text-2xl font-semibold">My Journey</h2>
+          <h2 className="text-2xl font-semibold">Professional Summary</h2>
           <div className="prose prose-neutral dark:prose-invert max-w-none">
             <p className="text-lg">
-              I&apos;m an AI-Focused Full Stack Developer with extensive experience building production-grade systems
-              for major financial institutions. My work spans from resilient microservices architecture to
-              cutting-edge AI agent development.
+              Dynamic AI Full Stack Engineer and Solution Architect with 12+ years of experience building scalable,
+              high-performance systems across banking and enterprise domains. Specializing in LLM orchestration,
+              agentic AI system design, and RAG pipeline development using LangChain, LangGraph, OpenAI API,
+              Azure AI Studio, and MCP (Model Context Protocol).
             </p>
             <p>
-              At Emirates NBD, I&apos;ve built critical wealth trading journeys, implemented event-driven architectures
-              with Kafka, and developed AI-powered speech-to-summary pipelines using Azure AI and LangChain.
-              I specialize in building systems that are not just functional, but resilient—with proper retries,
-              idempotency, circuit breakers, and distributed tracing.
+              Proven record of shipping production-grade AI features — including multi-agent pipelines,
+              speech-to-summary systems, and AI-powered developer tools — on top of a strong foundation in
+              Node.js, TypeScript, Angular, NestJS, Kafka, PostgreSQL, and MongoDB.
             </p>
             <p>
-              My passion lies in agentic AI—building intelligent systems that can reason, plan, and execute
-              complex workflows. I work extensively with LangChain, LangGraph, MCP (Model Context Protocol),
-              and RAG pipelines to create AI agents that provide real value.
+              Passionate about transforming traditional architectures into intelligent, context-aware solutions
+              that enhance decision-making and customer experience. Currently building MCP server plugin suites
+              for Claude AI and agentic brokerage features at Emirates NBD, while pursuing an MS in AI at UT Austin.
             </p>
           </div>
         </section>
@@ -94,7 +94,7 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-3xl font-bold">5+</CardTitle>
+                <CardTitle className="text-3xl font-bold">12+</CardTitle>
                 <CardDescription>Years of Experience</CardDescription>
               </CardHeader>
             </Card>
@@ -107,9 +107,40 @@ export default function About() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-3xl font-bold">AI-First</CardTitle>
-                <CardDescription>Agentic AI & RAG Expertise</CardDescription>
+                <CardDescription>LLM Orchestration, Agentic AI & RAG</CardDescription>
               </CardHeader>
             </Card>
+          </div>
+        </section>
+
+        {/* Certifications */}
+        <section>
+          <h2 className="text-2xl font-semibold mb-6">Certifications & Training</h2>
+          <div className="space-y-4">
+            {profileData.certifications.map((cert, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <Card>
+                  <CardHeader>
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <CardTitle className="text-base">{cert.title}</CardTitle>
+                        <CardDescription className="mt-1">{cert.issuer} · {cert.year}</CardDescription>
+                      </div>
+                      <Badge variant="secondary">{cert.year}</Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{cert.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </section>
       </motion.div>

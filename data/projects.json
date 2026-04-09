@@ -43,6 +43,26 @@
     ]
   },
   {
+    "id": "claude-mcp-plugin-suite",
+    "name": "Claude MCP Plugin Suite",
+    "description": "Built a suite of Model Context Protocol (MCP) server tools for Claude AI: PII Detector for real-time data redaction, Insomnia cURL Generator with Insomnia collection export, Caveman Compressor for payload optimization, and Audit & Reset for API session management. Enables AI-native API development workflows.",
+    "longDescription": "Production-ready MCP (Model Context Protocol) server plugins for Claude AI that transform how developers interact with APIs. The suite includes: a PII Detector that performs real-time sensitive data redaction in API payloads before they reach LLM context; an Insomnia cURL Generator that converts API calls to cURL commands with one-click Insomnia collection export; a Caveman Compressor that optimizes payload size for token efficiency; and an Audit & Reset tool for complete API session lifecycle management. Together these plugins enable AI-assisted API development workflows inside Claude's agentic environment.",
+    "githubUrl": "https://github.com/girish2408",
+    "technologies": ["MCP", "Claude AI", "Node.js", "TypeScript", "Anthropic"],
+    "architecture": {
+      "protocol": "Model Context Protocol (MCP)",
+      "runtime": "Node.js with TypeScript",
+      "integration": "Claude AI (Anthropic)",
+      "tools": "PII Detector, cURL Generator, Payload Compressor, Session Manager"
+    },
+    "highlights": [
+      "Real-time PII detection and redaction in API payloads",
+      "One-click Insomnia collection export from cURL",
+      "Payload size optimization for token efficiency",
+      "API session lifecycle management"
+    ]
+  },
+  {
     "id": "market-decoder",
     "name": "Market Decoder",
     "description": "AI-powered news summarizer that processes financial market news and provides intelligent summaries.",

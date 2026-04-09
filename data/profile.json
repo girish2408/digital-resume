@@ -2,7 +2,7 @@
   "personal": {
     "name": "Girish Watwani",
     "location": "Abu Dhabi, UAE",
-    "role": "AI-Focused Full Stack Developer",
+    "role": "AI Full Stack Engineer | LLM & Agentic Systems",
     "contact": {
       "phone": "+971503214652",
       "email": "girish.watwani2008@gmail.com",
@@ -13,17 +13,17 @@
   "experience": [
     {
       "company": "Emirates NBD / D4Insight",
-      "role": "AI-Focused Full Stack Developer",
+      "role": "AI Full Stack Engineer | LLM & Agentic Systems",
       "period": "Recent",
       "highlights": [
-        "Built Node.js microservices for wealth trading journeys",
-        "Implemented gold buy/sell/redeem workflows",
-        "Integrated Kafka for event-driven architecture",
-        "Implemented retries, idempotency, circuit breakers, and distributed tracing",
-        "Developed AI speech-to-summary pipeline using Azure AI and LangChain",
-        "Built rights issue and DCI (Dual Currency Investment) features",
-        "Implemented price alerts system",
-        "Set up Playwright CI/CD pipelines"
+        "Built Node.js microservices for wealth trading journeys using resilient agentic workflows and distributed systems patterns",
+        "Implemented gold buy/sell/redeem workflows with idempotency, retries, circuit breakers, and distributed tracing",
+        "Integrated Kafka for event-driven architecture supporting high-throughput, AI-native development patterns",
+        "Developed AI speech-to-summary pipeline using Azure AI Studio and LangChain, leveraging retrieval-augmented generation (RAG) patterns and prompt engineering for contextual accuracy",
+        "Engineered production-ready MCP (Model Context Protocol) server plugins for Claude AI, including a PII Detector tool (real-time sensitive data redaction in API payloads), an Insomnia cURL Generator with one-click export to Insomnia collections, a Caveman Compressor for payload size optimization, and an Audit & Reset tool for API session lifecycle management — enabling AI-assisted API development workflows.",
+        "Designed and showcased an internal SalaryAgent concept (agentic brokerage feature) with multi-agent LangChain architecture and an interactive HTML prototype, presented to the ENBD X innovation team as a next-generation wealth management capability leveraging large language models (LLMs) and multi-agent orchestration.",
+        "Built rights issue and DCI (Dual Currency Investment) features for structured products",
+        "Set up Playwright CI/CD pipelines for automated end-to-end testing"
       ],
       "technologies": ["Node.js", "TypeScript", "Kafka", "Azure AI", "LangChain", "Playwright", "Microservices", "Distributed Systems"]
     },
@@ -71,7 +71,7 @@
     }
   ],
   "skills": {
-    "ai": ["LangChain", "LangGraph", "OpenAI API", "RAG", "Vector DBs (Chroma/Pinecone)", "Agentic AI", "n8n", "MCP", "LangSmith", "Azure AI Studio"],
+    "ai": ["LangChain", "LangGraph", "LangSmith", "OpenAI API", "RAG Pipelines", "Vector Search", "Vector DBs (Chroma/Pinecone)", "Agentic AI", "Multi-Agent Systems", "MCP (Model Context Protocol)", "Prompt Engineering", "Azure AI Studio", "Palantir Foundry", "Palantir AIP", "Generative AI", "n8n"],
     "backend": ["Node.js", "TypeScript", "JavaScript", "Python", "NestJS", "GraphQL", "REST", "Microservices"],
     "frontend": ["Angular", "React", "Next.js", "TypeScript"],
     "infrastructure": ["Docker", "Kubernetes", "OpenShift", "CI/CD"],
@@ -99,18 +99,34 @@
   ],
   "education": {
     "degree": "MS AI",
+    "institution": "UT Austin",
     "status": "In Progress"
   },
+  "certifications": [
+    {
+      "title": "Palantir Foundry & AIP — Scoping Use Cases for Foundry & AIP",
+      "description": "Practical training on identifying and scoping enterprise AI use cases in Palantir Foundry/AIP, including stakeholder alignment frameworks and use case evaluation criteria.",
+      "issuer": "Palantir Technologies",
+      "year": "2025"
+    },
+    {
+      "title": "Palantir Foundry & AIP — Introduction to Foundry & AIP for Enterprise Organizations",
+      "description": "Foundational certification covering Palantir's data management platform, AIP (Artificial Intelligence Platform), and enterprise AI deployment patterns.",
+      "issuer": "Palantir Technologies",
+      "year": "2025"
+    }
+  ],
   "expertise": {
-    "domains": ["Banking", "Wealth Management", "Trading Platforms", "AI/ML", "Agentic AI", "RAG Systems"],
+    "domains": ["Banking", "Wealth Management", "Trading Platforms", "AI/ML", "Agentic AI", "RAG Systems", "LLM Orchestration"],
     "specializations": [
+      "LLM orchestration and agentic AI system design",
+      "RAG pipeline development with vector embeddings",
+      "Multi-agent orchestration with LangChain & LangGraph",
+      "Model Context Protocol (MCP) server development",
       "Resilient microservices architecture",
       "Event-driven systems with Kafka",
-      "AI-powered workflows with LangChain",
-      "RAG pipeline development",
-      "Agent orchestration with MCP",
-      "Performance optimization",
-      "CI/CD automation"
+      "AI-native development workflows",
+      "Performance optimization and CI/CD automation"
     ]
   }
 }

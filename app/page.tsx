@@ -58,13 +58,13 @@ export default function Home() {
             </div>
 
             <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-              Senior <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Full Stack</span> <br />
+              AI <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-indigo-400">Full Stack</span> <br />
               Engineer
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Building at the intersection of <span className="text-foreground font-semibold">Enterprise Banking</span> and <span className="text-foreground font-semibold">Agentic AI</span>. Architecting resilient systems for the future of fintech.
+              <span className="text-foreground font-semibold">LLM & Agentic Systems</span> — Building at the intersection of <span className="text-foreground font-semibold">Enterprise Banking</span> and <span className="text-foreground font-semibold">Generative AI</span>. Shipping production-grade RAG pipelines, multi-agent workflows, and MCP-powered tools.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
@@ -75,7 +75,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full text-base h-12 px-8 backdrop-blur-sm bg-background/50 hover:bg-background/80">
-                <a href="/Girish_Jan_2026.pdf" download="Girish_Jan_2026.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/Girish_April_2026.pdf" download="Girish_April_2026.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-4 w-4" />
                   Resume
                 </a>
@@ -114,18 +114,19 @@ export default function Home() {
                 </div>
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-500">
+                    <div className="p-2.5 rounded-xl bg-primary/10 text-primary">
                       <Cpu className="w-6 h-6" />
                     </div>
                     <h3 className="text-xl font-bold font-heading">Agentic AI Engineer</h3>
                   </div>
                   <p className="text-muted-foreground mb-4 max-w-lg">
-                    Specializing in LangChain & RAG architectures to build autonomous agents that plan, reason, and execute.
+                    Specializing in LLM orchestration, RAG pipelines, and multi-agent systems. Building MCP server tools and agentic workflows that plan, reason, and execute — leveraging LangChain, LangGraph, and OpenAI API.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">LangGraph</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Vector DBs</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">OpenAI</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">LangGraph</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">RAG Pipelines</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">MCP</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">OpenAI API</span>
                   </div>
                 </div>
               </motion.div>
@@ -176,10 +177,11 @@ export default function Home() {
 
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "LangChain", "LangGraph", "MCP", "RAG",
+                    "LangChain", "LangGraph", "MCP", "RAG Pipelines",
+                    "Agentic AI", "Multi-Agent Systems", "Prompt Engineering", "LangSmith",
                     "Node.js", "Kafka", "GraphQL", "TypeScript",
-                    "Next.js", "Azure AI", "OpenAI API", "Vector DBs",
-                    "Microservices", "Docker", "Kubernetes"
+                    "Next.js", "Azure AI Studio", "OpenAI API", "Vector Search",
+                    "Palantir Foundry", "Microservices", "Docker", "Kubernetes"
                   ].map((tech) => (
                     <span key={tech} className="px-3 py-1.5 rounded-md text-xs font-medium bg-primary/5 text-primary/80 border border-primary/10 hover:bg-primary/10 transition-colors cursor-default">
                       {tech}

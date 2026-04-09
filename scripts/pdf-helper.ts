@@ -40,7 +40,7 @@ async function extractTextFromPDF(path: string) {
 
 // Test if run directly
 if (import.meta.url === `file://${process.argv[1]}`) {
-   extractTextFromPDF('public/Girish_Jan_2026.pdf').then(text => {
+   extractTextFromPDF('public/Girish_April_2026.pdf').then(text => {
        console.log('Extracted text length:', text.length);
        console.log('Preview:', text.substring(0, 500));
    }).catch(console.error);

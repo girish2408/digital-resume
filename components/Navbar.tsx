@@ -14,7 +14,7 @@ const navItems = [
   { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
   { href: "/agentic-lab", label: "Agentic AI" },
-  { href: "/Girish_Jan_2026.pdf", label: "Resume", target: "_blank" },
+  { href: "/Girish_April_2026.pdf", label: "Resume", target: "_blank" },
 ]
 
 export function Navbar() {
